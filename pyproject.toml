@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "newsquant"
-version = "0.1.0"
+version = "0.1.1"
 description = "Multi-source financial news library with quality scoring and ticker extraction"
 readme = "README.md"
 license = { file = "LICENSE" }

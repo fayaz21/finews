@@ -48,4 +48,4 @@ __all__ = [
     "BUILTIN_SOURCE_NAMES",
 ]
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
