@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "finews"
+name = "newsquant"
 version = "0.1.0"
 description = "Multi-source financial news library with quality scoring and ticker extraction"
 readme = "README.md"
@@ -68,16 +68,16 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/fayazmoqueem/finews"
-Repository = "https://github.com/fayazmoqueem/finews"
-"Bug Tracker" = "https://github.com/fayazmoqueem/finews/issues"
+Homepage = "https://github.com/fayazmoqueem/newsquant"
+Repository = "https://github.com/fayazmoqueem/newsquant"
+"Bug Tracker" = "https://github.com/fayazmoqueem/newsquant/issues"
 
 [project.scripts]
 scraper = "scraper.cli.main:cli"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["scraper*", "config*", "finews*"]
+include = ["scraper*", "config*", "newsquant*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

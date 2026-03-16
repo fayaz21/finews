@@ -13,7 +13,7 @@ Initial public release.
 
 ### Added
 
-**Public Python API (`finews`)**
+**Public Python API (`newsquant`)**
 - `Scraper` class — single entry point for fetching enriched articles
 - `Scraper.fetch()` — returns `list[Article]`, no database required
   - `tickers` — post-filter by extracted ticker symbols

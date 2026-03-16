@@ -1,11 +1,11 @@
-# finews
+# newsquant
 
 **The financial news data library for Python.**
 
-`pip install finews`
+`pip install newsquant`
 
-[![PyPI](https://img.shields.io/pypi/v/finews)](https://pypi.org/project/finews/)
-[![Python](https://img.shields.io/pypi/pyversions/finews)](https://pypi.org/project/finews/)
+[![PyPI](https://img.shields.io/pypi/v/newsquant)](https://pypi.org/project/newsquant/)
+[![Python](https://img.shields.io/pypi/pyversions/newsquant)](https://pypi.org/project/newsquant/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
@@ -16,7 +16,7 @@ score — no database required.
 
 **What gap does this fill?**
 Existing options are either single-source (`newsapi-python`, `feedparser`),
-return no article body (`yfinance`), or have no quality layer at all. finews
+return no article body (`yfinance`), or have no quality layer at all. newsquant
 covers multiple sources, runs full-text extraction via
 [trafilatura](https://github.com/adbar/trafilatura), deduplicates across
 sources, and scores every article on a 0–1 quality scale.
@@ -26,13 +26,13 @@ sources, and scores every article on a 0–1 quality scale.
 ## Install
 
 ```bash
-pip install finews
+pip install newsquant
 ```
 
 Python 3.9+ required. For PostgreSQL persistence add the optional extra:
 
 ```bash
-pip install "finews[postgres]"
+pip install "newsquant[postgres]"
 ```
 
 ---
@@ -40,7 +40,7 @@ pip install "finews[postgres]"
 ## Quickstart
 
 ```python
-from finews import Scraper
+from newsquant import Scraper
 
 scraper = Scraper(sources=["yahoofinance", "cnbc"])
 articles = scraper.fetch(days_back=1)
@@ -95,7 +95,7 @@ returns the `Article` list regardless.
 Subclass `BaseFetcher` to add any source the pipeline doesn't cover.
 
 ```python
-from finews import Scraper, BaseFetcher, SourceConfig
+from newsquant import Scraper, BaseFetcher, SourceConfig
 from scraper.models.article import RawArticle
 from datetime import datetime, timezone
 
@@ -237,8 +237,8 @@ Bug reports and pull requests are welcome. For major changes, open an issue
 first to discuss what you'd like to change.
 
 ```bash
-git clone https://github.com/your-username/finews
-cd finews
+git clone https://github.com/your-username/newsquant
+cd newsquant
 pip install -e ".[dev]"
 pytest
 ```

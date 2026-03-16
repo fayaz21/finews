@@ -1,8 +1,8 @@
-"""finews — Financial news data library for Python.
+"""newsquant — Financial news data library for Python.
 
 Quickstart::
 
-    from finews import Scraper
+    from newsquant import Scraper
 
     scraper = Scraper(sources=["yahoofinance", "cnbc"])
     articles = scraper.fetch(tickers=["AAPL"], days_back=7)
@@ -12,7 +12,7 @@ Quickstart::
 
 Building a custom source::
 
-    from finews import Scraper, BaseFetcher, SourceConfig
+    from newsquant import Scraper, BaseFetcher, SourceConfig
     from scraper.models.article import RawArticle
 
     class MySource(BaseFetcher):
@@ -29,8 +29,8 @@ Building a custom source::
 See :class:`Scraper` and :class:`BaseFetcher` for the full API reference.
 """
 
-from finews._scraper import Scraper
-from finews._sources import BUILTIN_SOURCE_NAMES, BUILTIN_SOURCES
+from newsquant._scraper import Scraper
+from newsquant._sources import BUILTIN_SOURCE_NAMES, BUILTIN_SOURCES
 from scraper.fetchers.base import BaseFetcher, FetchError
 from scraper.models.article import Article
 from scraper.models.source import SourceConfig

@@ -1,4 +1,4 @@
-"""Core Scraper class — the single public entry point for the finews library."""
+"""Core Scraper class — the single public entry point for the newsquant library."""
 
 from __future__ import annotations
 
@@ -9,7 +9,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 from config.settings import settings
-from finews._sources import BUILTIN_SOURCE_NAMES, BUILTIN_SOURCES
+from newsquant._sources import BUILTIN_SOURCE_NAMES, BUILTIN_SOURCES
 from scraper.db.base import Base
 from scraper.db.repository import ArticleRepository
 from scraper.enrichment import (
@@ -101,7 +101,7 @@ class Scraper:
     --------
     Basic usage::
 
-        from finews import Scraper
+        from newsquant import Scraper
 
         scraper = Scraper(sources=["yahoofinance", "cnbc"])
         articles = scraper.fetch(days_back=1)

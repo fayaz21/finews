@@ -45,7 +45,7 @@ class BaseFetcher(ABC):
 
     Minimal example::
 
-        from finews import BaseFetcher, SourceConfig
+        from newsquant import BaseFetcher, SourceConfig
         from scraper.models.article import RawArticle
 
         class MyAPIFetcher(BaseFetcher):
@@ -81,7 +81,7 @@ class BaseFetcher(ABC):
 
     Then plug it in::
 
-        from finews import Scraper
+        from newsquant import Scraper
 
         scraper = Scraper(sources=[MyAPIFetcher(api_key="secret")])
         articles = scraper.fetch(tickers=["AAPL"])
